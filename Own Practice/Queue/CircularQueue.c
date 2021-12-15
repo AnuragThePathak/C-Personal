@@ -43,8 +43,8 @@ void enqueue(Queue *queue, int element)
     }
     else
     {
-        queue->data[queue->rear] = element;
         queue->rear = (queue->rear + 1) % queue->size;
+        queue->data[queue->rear] = element;
     }
 }
 
